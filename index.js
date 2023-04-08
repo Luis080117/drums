@@ -121,6 +121,55 @@ function touchFun(innerHTML){
     }
 }
 
+
+function TouchAnimation(innerHTML){
+    switch (innerHTML){
+        case "w":
+            document.querySelector(".w").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".w").classList.remove("pressed");
+            }, 100);
+            break;
+        case "a":
+            document.querySelector(".a").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".a").classList.remove("pressed");
+            }, 100);
+            break;
+        case "s":
+            document.querySelector(".s").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".s").classList.remove("pressed");
+            }, 100);
+            break;
+        case "d":
+            document.querySelector(".d").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".d").classList.remove("pressed");
+            }, 100);
+            break;
+        case "j":
+            document.querySelector(".j").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".j").classList.remove("pressed");
+            }, 100);
+            break;
+        case "k":
+            document.querySelector(".k").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".k").classList.remove("pressed");
+            }, 100);
+            break;
+        case "l":
+            document.querySelector(".l").classList.add("pressed");
+            setTimeout(function (){
+                document.querySelector(".l").classList.remove("pressed");
+            }, 100);
+            break;
+    }   
+}
+
+
 function myFunction(mediaqueryList){
     if (mediaqueryList.matches){
         document.addEventListener("keydown", function (event){
@@ -132,12 +181,14 @@ function myFunction(mediaqueryList){
         for (var i=0; i<document.querySelectorAll(".drum").length; i++){
             document.querySelectorAll(".drum")[i].addEventListener("click", function (){
             var innerHTML = this.innerHTML;
-            touchFun(innerHTML)});
+            touchFun(innerHTML);
+            TouchAnimation(innerHTML);});
         }
         for (var i=0; i<document.querySelectorAll(".drum").length; i++){
             document.querySelectorAll(".drum")[i].addEventListener("touchend", function (){
             var innerHTML = this.innerHTML;
-            touchFun(innerHTML)});
+            touchFun(innerHTML);
+            TouchAnimation(innerHTML);});
         }
     }
 }
